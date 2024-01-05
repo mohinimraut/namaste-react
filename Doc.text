@@ -1,0 +1,31 @@
+Session-1
+-------------------------------
+=>const heading=React.createElement("h1",{id:"heading",xyz:"abc"},"Hello World from React!");
+const root=ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading)
+
+=->If we trying to print console.log(heading ) =>Its give us a object.
+=>props are children plus attribute.
+
+=>When createElement we have to make sibling then we have to take array.
+-------------------------
+React 18
+===================
+Session-2
+----------------------
+echo "# namaste-react" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mohinimraut/namaste-react.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/mohinimraut/namaste-react.git
+git branch -M main
+git push -u origin main
+===================
+=>Akshay Senani gits steps
+1)git init
+2)git branch -M main
+3)git add .
