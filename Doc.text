@@ -41,3 +41,14 @@ npx parcel index.html
 =>npx parcel build index.html =>
 this build for production that time come error Did you mean App.html so remove in package.json main ->  "main": "App.js" this
 This is way to tell this is entry point .When give parcel give entry point index.html
+
+************************
+Session3
+***********************
+To execute command is:
+npx parcel index.html =>This will create buiseness men build for us
+============================
+
+REact is different and jsx is differnt 
+-----------------
+Bracket pair color toggler,prettier code extension,Es lint,better comment   
