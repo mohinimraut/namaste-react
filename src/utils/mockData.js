@@ -1,0 +1,257 @@
+const resList=
+[
+    {
+    type:"restaurant",
+    data:{
+        id:1,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"5116a385bac0548e06c33c08350fbf11"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:2,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.4",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"2b4f62d606d1b2bfba9ba9e5386fabb7"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:3,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"85825a6d74b1059a63a9b688de9f67ce"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:4,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.3",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"5116a385bac0548e06c33c08350fbf11"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:5,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"tjwqbm9hgnwcjy8ixgsq"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:6,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.1",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"b39e4312ae2e9f65c3b58faaed83f488"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:7,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"bb7ae131544c7d37e10fc5faf76f09d6"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:8,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"ff0747ae3755d4ed49a4d7c0c2d8a2d4"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:9,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"sqtixsuecffu2owalvm4"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:10,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"49845b494b1e637209b7bd1c7ca184ad"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:11,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"af33b81798b11deba338e94b7585d348"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:12,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"mbckdaunuw3ow4psdxvj"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:13,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"34.1",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"guanrrlmepynn3jxmlbx"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:14,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.3",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"89fccaa76f2f760e2742b9e53d32bb69"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:15,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.1",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"qa8rxaufmsyorl3vtnaw"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:16,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"fx1pktrdhgtxeoakvpx1"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:17,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.3",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"81cf6bfe2760a45a0caf2e28716ca4d7"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:18,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.1",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"c2f533ee4960991a29227a27f516c59b"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:19,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.3",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"85ccae4e3576f9330af102c46ca85395"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:20,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"4.3",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"gkemzbjznxyjuyj5emso"
+    }
+},
+{
+    type:"restaurant",
+    data:{
+        id:21,
+        name:"KFC",
+        costForTwo:40000,
+        avgRating:"3.8",
+        cuisines:["Biryani", "North Indian", "Asian"],
+        deliveryTime:36,
+        cloudinaryImageId:"fug7qclhcdqgxfboj2w8"
+    }
+}
+]
+
+export default resList;

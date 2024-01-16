@@ -52,3 +52,123 @@ npx parcel index.html =>This will create buiseness men build for us
 REact is different and jsx is differnt 
 -----------------
 Bracket pair color toggler,prettier code extension,Es lint,better comment   
+-------------------
+https://www.logodesign.net/logo/smoking-burger-with-lecture-3624ld.png
+===============================
+Installed json Viewer
+================================
+
+ {
+                    "info": 
+                    {
+                      "id": "395308",
+                      "name": "McDonald's Gourmet Burger Collection",
+                      "cloudinaryImageId": "qa8rxaufmsyorl3vtnaw",
+                      "locality": "Virar Global City",
+                      "areaName": "Virar",
+                      "costForTwo": "₹600 for two",
+                      "cuisines": [
+                        "Burgers",
+                        "Beverages",
+                        "Cafe",
+                        "Desserts"
+                      ],
+                      "avgRating": 4.2,
+                      "parentId": "10761",
+                      "avgRatingString": "4.2",
+                      "totalRatingsString": "100+",
+                      "sla": {
+                        "deliveryTime": 21,
+                        "lastMileTravel": 1.8,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "21 mins",
+                        "lastMileTravelString": "1.8 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2024-01-09 02:45:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        
+                      },
+                      "isOpen": true,
+                      "aggregatedDiscountInfoV2": {
+                        
+                      },
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            
+                          },
+                          "textBased": {
+                            
+                          },
+                          "textExtendedBadges": {
+                            
+                          }
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                          "lottie": {
+                            
+                          },
+                          "video": {
+                            
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+                        
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+                        
+                      }
+                    },
+                    "analytics": {
+                      
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/restaurants/mcdonalds-gourmet-burger-collection-global-city-virar-mumbai-395308",
+                      "type": "WEBLINK"
+                    }
+                  },
+
+=================================================
+=>join()
+This array method if array element come with , or - or other then you used join
+=============================================
+Best practice is separate file for separate component
+React will find javascript file itself
+==================
+constants.js file all hard coded thing write here
+================================
+LOGO_URL =>It is called snake case.
+==============================
+Why give name utils=>utils eans utility that used across the app.
+====================
+
+=>One file have only one default export
+->If we export multiple modeule then we can used named export ->using kewoed export
+===================
+Always good practice make component small not more than line 100.
+================================
+=> swiggy api->
+https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING
+------------------------------
+line number => 823
+======================
+ cusines=>  cuisines
+=========================
+Conditional Rendering=>Rendering basis of condition
+=========================
+React will find out difference between two vitual Dom.Every time inputkey press whole body rerender.
+=======================
+=>React Fibre=>Is a new Rconcilation Algorithm process find out the diffence between two virtual Dom's and update the DOM only where required.
+===========
+Episode 6 current
