@@ -172,3 +172,12 @@ React will find out difference between two vitual Dom.Every time inputkey press 
 =>React Fibre=>Is a new Rconcilation Algorithm process find out the diffence between two virtual Dom's and update the DOM only where required.
 ===========
 Episode 6 current
+===============================================================================================
+How to find out Swiggy api url
+inspect=>go to network tab->fetch/xhr ->Its give you api calls
+->here get api url
+https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.458573&lng=72.81337979999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
+
+=>Json-Viewer google extension to dispay data beutify.
+
+
