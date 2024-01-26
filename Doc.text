@@ -179,5 +179,158 @@ inspect=>go to network tab->fetch/xhr ->Its give you api calls
 https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.458573&lng=72.81337979999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
 
 =>Json-Viewer google extension to dispay data beutify.
+====================================================
+=>If you not want to use cors chrome extension because that work in ur computer only other people may not have.THen how to resolved that? 
+->corsproxy.io
+==================
+=> Episode 7
+React Router DOM => version6
+npm i react-router-dom
+-----------
+=>useRouteError =>THis hook tell us more about error
+---------
+Everything is component is React.
+React is a Single Page Application you don't change the page.
+->Why is a single page->Its a single page only component interchange.
+-------------------
+2 types of routing in React/Web Apps
+=>Client side routing->In this client side  no network call needed component already render.
+=>Server side routing->In this network call and then get html page
+------------
+Api menu card individual api=>https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=425&submitAction=ENTER
+---------------------
+=========================
+***Veg-only toggle homework
+====================
+useParams hook give us by react-ro-dom
+--------------------
+Q .) How will you card make clickabale ?
+----------
+->Key should be in parent jsx
 
+-------------------
+Behaind the scene Link is using anchor tag.Link is wrapper over anchor tag.
+---------------------
+=======================
+H.W.
+*** Why write super
+Why used this keyword in the class
+-----------------------------
+Q .) What is javascript class?
+It is normal javascript class.
 
+In class component have render method and render method return piece of jsx which will be displayed on the ui.
+
+Q.) What is React.Component =>Is a class given by React.
+
+React.Component come from react.
+--------------
+If you no write super(props in class component it will throw error.)
+--------------
+this=>You will always used this keyword in the class.
+---------
+Whenever new instance of the class is created the constructor is called.
+=====================
+constructor is a best place to create a state variable.
+-> Inside constructor->this.state{} is a object.
+->this.state{
+
+}
+It is a big object,it contains alt the variable.
+-----------------------------
+->In functional component useState behind the scene keep all the variable in same object.
+--------------------
+In class component state variable can not update directly.
+In class component to update state used this.setState() function to update the states.Whenever state variable update component re-render the component.
+-----------------------
+===============================
+***mq
+why onClick take callback function.
+===================================================
+class life cycle
+loading and mounting is a same word
+--------------------------
+Life cycle of a parent child component 
+=>
+1.)parent constructor
+2.)parent render
+3.)child constructor
+4.)child render
+5.)child component Did mount
+6.)parent component Did mount
+
+ When component mounted componentDidMount is called
+-----
+=>In class component 
+1)Constructor is called.
+2)render is called
+----------------
+Q.)Why componentDidMount is used?
+Make an api call.
+----------------
+In class component when render phase completed then DOM updated
+----------------------
+constructor is called->render is called ->then dom updated->then componentDidMount is called
+---------------------
+render phase->constructor,render
+----------------------
+componentWillUnmount called when we leaving the page.
+React is  a single page just changing the component.
+-----------------------
+===================================
+=> useEffect can not make async otherwise it throws warning.useEffect must not return anything besides a function,which is used for clean-up.
+----------------------
+=======================
+chapter 8 revise once again.
+----------------------------- 
+======================
+React.component given by react
+In class base component constructor will recieve this props.
+=>
+In React, when you create a class component, you often need to access properties (props) passed to that component from its parent component. The super(props) call is used within the constructor of a class component to call the constructor of the parent class (React.Component) and pass the props to it. This is necessary for proper initialization of the component.
+->class component used this keyword used 
+------------------------------------------------------------
+super(props) is used to call the constructor of the parent class (React.Component) with the props parameter.
+this.props refers to the properties passed to the component, which are initialized by calling super(props) in the constructor.
+In summary, super(props) ensures that the parent class (superclass) is properly initialized with the props, and this.props allows you to access those props within the methods of the child class (subclass).
+==============
+In functional component though we used multiple useState hook but behind the scene React make one big state object.
+==========================
+Life cycle methods
+constructor=>render=>componentDidMount=>componentWillUnmount
+---------
+***Quickly render then make api call =>then fill the data
+->after render phase react update the dom then commit phase come
+
+->after render phase means => this two constructor->render
+
+->commit phase comes componentDidMount
+
+->after render phase update dom and call componentDidMount and fill the data
+->After mounting phase component will render once component with dummy data very quickly.
+->constructor call once only
+=========================
+->render phase fast,commit phase takes time
+=>Dom updating is expensive task so react tries to badge the task
+---------------
+Frst constructor call with some dummy data.
+-------------
+componentDidMount update the dom ->then call compnentDidUpdate
+============================
+Component Cycle in class component
+
+=>Mounting Phase
+->Constructor
+->Render (dummy)
+-><HTML Dummy>
+->Component Did mount
+-><API Call>
+-<this.setState>->State variable is updated
+
+=>Update Phase
+->render(Api data)
+<HTML(new API call)
+componentDidUpdate
+==================
+Unmounting means =>disabling or remove from ui
+-----------------

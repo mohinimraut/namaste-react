@@ -19,7 +19,11 @@
 .res-container{
     display:flex;
     flex-wrap: wrap;
-    
+    text-decoration: none;
+}
+.res-container a{
+    text-decoration: none !important;
+    color: black;
 }
 .res-card{
     padding: 10px;
@@ -27,7 +31,7 @@
     height:350px;
     border:1px solid#f0f0f0;
     margin: 5px;
-
+   
 }
 .res-card:hover{
 border:1px solid;
@@ -55,4 +59,7 @@ width:200px;
 height: 400px;
 background-color: rgb(226, 226, 226);
 margin:10px;
+}
+.user-card{
+    border:1px solid;
 }

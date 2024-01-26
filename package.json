@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is Namaste React by Akshay Saini",
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -26,13 +26,14 @@
   "homepage": "https://github.com/mohinimraut/namaste-react#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2"
   },
   "devDependencies": {
     "parcel": "^2.11.0",
     "process": "^0.11.10"
   },
-  "browserlist":[
+  "browserlist": [
     "last 2 versions"
-    ]
+  ]
 }

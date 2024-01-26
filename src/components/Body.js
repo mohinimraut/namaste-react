@@ -1,17 +1,23 @@
+import { useEffect, useState } from "react";
+
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
-import { useEffect, useState } from "react";
+
 const Body = () => {
   let [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   useEffect(() => {
+    console.log("useEffect called....")
     fetchData();
-  }, []);
+  },[]);
 
   const fetchData = async () => {
     const data = await fetch(
+      // corsproxy not working for me Sorry, you have been blocked this msg displayed so i used CORS google extension only -"https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
@@ -59,9 +65,11 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.4
+              (res) => res?.info?.avgRating > 4.4
             );
-            setListOfRestaurants(filteredList);
+            // setListOfRestaurants(filteredList);
+            setFilteredRestaurants(filteredList);
+
           }}
         >
           Top Rated Restaurant
@@ -69,7 +77,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants?.map((restaurant) => (
-          <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+         <Link className="card-link" key={restaurant?.info?.id} to={"/restaurants/"+ restaurant?.info?.id}><RestaurantCard  resData={restaurant} /></Link> 
         ))}
       </div>
     </div>
