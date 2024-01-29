@@ -4,7 +4,7 @@ const User=({name,location})=>{
     const [count2]=useState(1);
 
     useEffect(()=>{
-      timer=setInterval(()=>{
+      const timer=setInterval(()=>{
             console.log("Namaste React OP")
           },1000);
 

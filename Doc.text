@@ -35,10 +35,12 @@ Solution :In index.html added =><script type="module" src="./App.js"></script>
 --------------------
 =>Steps install parcel 
 npm install -D parcel
-=>to create server to listen to the port
+=>to create server to listen to the port.
+***Build development
+
 npx parcel index.html
 ============================
-=>npx parcel build index.html =>
+***=>npx parcel build index.html =>
 this build for production that time come error Did you mean App.html so remove in package.json main ->  "main": "App.js" this
 This is way to tell this is entry point .When give parcel give entry point index.html
 
@@ -334,3 +336,45 @@ componentDidUpdate
 ==================
 Unmounting means =>disabling or remove from ui
 -----------------
+========================================
+Each component is a different funtion.Each of the compoent should have single responsibility.
+Modularity=>You break down the code into small small module.So your code become maintanable,your code become testable,reusable .you follow single responsible principle .You keep your compoent as light as possible.
+==============================================
+Hookks => are normal javascript function which given to us by React.hooks are useState,useEffect,useParams given by React Router
+----------
+Here RestaurantMenu should have two reponsibility fetching the data and displaying the data.
+-----------
+hooks are nothing normal utility function.
+Provide a separate file for separate hook. 
+What is a hook=>Normal javascript functions.
+=============================
+=>custom hook easy to write when->When know input and output
+=============================================
+Window : online event listener
+========================
+Setting->setting.json
+To activate extension ,for ex suppose  i write h1.header and enter then it autocomplete h1 tag with className header name
+"emmet.includeLanguages": {
+    "javascript":"javascriptreact"
+  }
+  ======================
+  To get correct symbol in vscode press windows+R and then type charmap
+  -------------------
+  Component start with capital letter.If lot of React project linter used and throws error.
+  -------------------------
+  Parcel => is basically a bundler
+  bundle all file and make it only one js file.In development phase not compressed and minified but in production mode it minfied and compressed also.
+  ===================
+  Chunking => 
+  Code Splitting =>
+  Dynamic Bundling =>
+  lazy loading=>Lazy loading component displayed when required.
+  on demand loading=>When user going perticular page then load.ex when go the glrocerry page then grocery page loaded
+  lazy()=>lazy() is a function given by React.
+
+  These all above names are same as Lazy Loading
+-----------------------------
+  If we used lazy loading->Its create different bundle for that component
+  When we used lazy loading it takes some time to load.It takes some miliseconds.So it throws suspense error.
+  So component passed inside <Suspense fallback={<h1>Loading....</h1>}></Suspense>.Inside fallback passed jsx,tags.
+  I can used lazyloading to distribute my component into different chunks.

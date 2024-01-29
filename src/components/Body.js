@@ -4,7 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   let [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -29,6 +29,9 @@ const Body = () => {
     );
   };
 
+  const onlineStatus=useOnlineStatus();
+  if(onlineStatus===false) return <h1>Looks like you are offline</h1>
+
   //conditional rendering using ternary operators
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
@@ -36,6 +39,8 @@ const Body = () => {
     <div className="body">
       <div className="filter">
         <div className="search">
+         
+
           <input
             type="text"
             className="search-box"
