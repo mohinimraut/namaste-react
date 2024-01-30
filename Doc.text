@@ -378,3 +378,60 @@ To activate extension ,for ex suppose  i write h1.header and enter then it autoc
   When we used lazy loading it takes some time to load.It takes some miliseconds.So it throws suspense error.
   So component passed inside <Suspense fallback={<h1>Loading....</h1>}></Suspense>.Inside fallback passed jsx,tags.
   I can used lazyloading to distribute my component into different chunks.
+  ==============================
+  =>sass and scss
+  ------
+  styled component
+  styled-components.com
+----------
+material ui=>mui.com=>lots of companies used
+bootstrap
+chakraui
+ant design =>second most popular ui library=>ant.design
+============================================================================
+https://tailwindcss.com/docs/installation
+
+Frameworkguides=>Parcel
+-----------
+==================
+Tailwind installations
+npm install -D tailwindcss postcss=>This instaling two things tailwindcss and postcss
+=>postcssa tool for
+=>npx means invoking tailwindcss
+->npx tailwindcss init =>It create tailwind.config.js for us=>ailwind.config.js this configuration for tailwind
+=>postcssrc=>It cofiguration file for postcss
+--------------------
+Your parcel bundler used postcssrc->postcssrc file telling to parcel,In our project used tailwindcss so parcel,please understand tailwind.
+=> "./src/**/*.{html,js,ts,jsx,tsx}",=>tailwind can be used in html,js,ts,jsx and tsx
+----------------
+tailwind.config.js
+-----
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,js}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+-------------------
+.postcssrc
+{
+  "plugins": {
+    "tailwindcss": {}
+  }
+}
+-------------------
+index.css=>we cofigure our tailwind in index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+============================
+tailwind css give / offers you className automatically
+---------------------------------
+*** Tailwind CSS IntelliSense extension
+------------------
+talwind is very very lightweight .ex suppose i used m-4 class many time but that import only once.
