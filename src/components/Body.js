@@ -1,13 +1,17 @@
-import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import { useContext, useEffect, useState } from "react";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 const Body = () => {
   let [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
   useEffect(() => {
     console.log("useEffect called....");
     fetchData();
@@ -17,15 +21,21 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    console.log(">>>>>>>>>>>", listOfRestaurants);
+
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+
     setFilteredRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) return <h1>Looks like you are offline</h1>;
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
@@ -53,22 +63,31 @@ const Body = () => {
           >
             Search
           </button>
-         
         </div>
         <div className="">
-            <button
-              className="px-4 py-1 m-4 rounded-lg bg-gray-100"
-              onClick={() => {
-                filteredList = listOfRestaurants.filter(
-                  (res) => res?.info?.avgRating > 4.4
-                );
+          <button
+            className="px-4 py-1 m-4 rounded-lg bg-gray-100"
+            onClick={() => {
+              filteredList = listOfRestaurants.filter(
+                (res) => res?.info?.avgRating > 4.4
+              );
 
-                setFilteredRestaurants(filteredList);
-              }}
-            >
-              Top Rated Restaurant
-            </button>
-          </div>
+              setFilteredRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
+        </div>
+        <div className="search p-2 m-2">
+          <label>UserName: </label>
+          <input
+            className="border border-black p-2"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
+        </div>
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurants?.map((restaurant) => (
@@ -77,7 +96,11 @@ const Body = () => {
             key={restaurant?.info?.id}
             to={"/restaurants/" + restaurant?.info?.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant?.info?.isOpen ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

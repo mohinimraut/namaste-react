@@ -143,7 +143,8 @@ Installed json Viewer
 
 =================================================
 =>join()
-This array method if array element come with , or - or other then you used join
+This array method if array element come with , or - or other then you used join.
+In JavaScript, the join() method is used to join all elements of an array into a single 
 =============================================
 Best practice is separate file for separate component
 React will find javascript file itself
@@ -435,3 +436,94 @@ tailwind css give / offers you className automatically
 *** Tailwind CSS IntelliSense extension
 ------------------
 talwind is very very lightweight .ex suppose i used m-4 class many time but that import only once.
+================================
+--------//Session-11-Start//--------
+Higher Oerder component=>In higher order components takes a component as a input and return enhanced and added extra feature then return a component.
+------
+Higher order component take one component as input,enhanced it and then return that component.
+----------------
+Akshay Saini=>promoted field is not api so => i used isOpen field
+---------------------
+Ui layer is a power of data layer.Very major is data layer
+
+@type=>can not given as name as @type its not valid javascript
+
+->const categories=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card.@type) we cannot write this way @type in filter
+
+->const categories=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card.["@type"]) we write this way @type in filter
+============================================
+w-6/12 =>width
+----------------------------
+React Developer tools
+-----------------------
+{categories.map((category,index) => (
+  In map second parameter is index
+  =================================
+
+  setShowIndex={() => setShowIndex(index)}:
+
+This syntax uses an arrow function as a callback. It creates a new function each time the component renders.
+When the callback function is executed (e.g., when an event occurs), it then calls setShowIndex(index) with the value of index at that moment.
+setShowIndex={setShowIndex(index)}:
+
+This syntax immediately invokes the setShowIndex function with the value of index during the rendering process.
+----------------------------
+  const [showIndex, setShowIndex] = useState(null);
+Everytihng collapsed
+---------
+  const [showIndex, setShowIndex] = useState(0);
+  First index opened
+  -----------
+  =============
+  Lifting state up=>
+  Sometime we liftin compoent to controlled children.
+  --------------------
+  React.dev=>new doc=>Lifuing state up
+  ===========================
+  ***Props drilling
+  =================
+  React everything is Component and Component has its own state and props.
+  ====================
+  =>useContext,ContextAPI
+  ->Scenario
+  What if data is present one place and access in another place then used contextAPI
+  example->LoggedIn user
+  =========================
+  Q.)In class based component do not have hook so how there used context api
+  -----------------
+  ==========
+  Context.Consumer take callback function
+  context.Provider wrap my whole app.
+  =======================
+  Redux is not mandatory
+When larged scaled application then used Redux 
+Redux and React is different libraries
+state management libraries =>Zuststand
+--------------------
+Heavily application Redux offers you a great solution for it.handlid data managing a store.
+---------------------
+React Dev Tools 
+Redux Dev Tools
+===========
+Redux=>
+A Predictable State Container for JS Apps.
+Redux work with other libraries and frameworks.
+-----
+React-Redux libraries is bridge between React and Redux
+Redux Toolkit library
+---------------
+Redux Store =>Slices
+Logical partitions as a Slices.ex userSlice,cartSlice
+===================
+=>Redux Toolkit Steps
+- 1)Install->@reduxjs/toolkit and react-redux
+   npm i @reduxjs/toolkit react-redux
+ -2)Build our store
+ 3)Connect our store to our app
+ -4)Create Slice(cartSlice)  
+ 5)Dispatch Action
+ 6)Selector
+ =======================
+ Provider,useSelector hook=>react-redux
+ useSelector hook gives us access to the store.
+ 
