@@ -14,7 +14,15 @@ const cartSlice = createSlice({
       state.items.pop();
     },
     clearCart: (state) => {
-      state.items.length = 0;
+      // state=[] ,here cannot do this because this changed only local not in Storage.
+
+      // 1 way 1
+      // state.items.length = 0;
+
+      // or way 2
+return {items:[]}  // This [] array replaced the original cart arra
+
+      // or you can return [] It also clear cart no need of state parameter.It modify the original cart array.
     },
   },
 });

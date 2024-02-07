@@ -524,6 +524,65 @@ Logical partitions as a Slices.ex userSlice,cartSlice
  5)Dispatch Action
  6)Selector
  =======================
- Provider,useSelector hook=>react-redux
+ Provider,useSelector hook,useDispatch hook=>react-redux
  useSelector hook gives us access to the store.
- 
+ -----------------
+ const dispatch=useDispatch();
+
+  const handleAddItem = (item) => {
+    dispatch(addItem(item))
+  };
+  ----------
+  ***note hook cannot directly used inside a function.
+  useDispatch hook give dispatch a function.
+  -------------------
+  onClick={()=>handleAddItem(item)}=>This function call onclick
+  onClick={handleAddItem(item)}=>This function call already
+  -------------------
+  fixed w-full z-10
+  -------------------
+  ***note When useSelector subscriber used extract exact portion of code otherwise big performance issued caused.
+  I dont want to subscribed whole store.
+  Only subscribe to only specifi of store so better performance.
+  ------------------------
+  Old vanilla Redux state canotble but redux toolkit give that state  can mutable.
+  Earlier Redux vanilla returning is mandatory but in Redux toolkit returning is not mandatory
+  ========================
+  *** In Redux Immer library worked for Redux Its find the difference between original state ,new state which is immutable state.Immer is a tiny package to allow to work with immutable state 
+
+  Immer take old state ,new state and find out the div of the state and give the new state.
+  ----------------
+  ***JS Hw Hwo to make deep clone copy of objece,pop ,push
+  ------------------------
+  Mutating the state
+  Just It added reference to the state=>state=["Mohini"]
+  ----------
+  Clear cart=>Mutated the state using=>state.items.length=0;
+  ======================
+  Behavior:
+The pop() method removes the last element from the array and returns it.
+It modifies the original array in place.
+If the array is empty, pop() returns undefined.
+Example:
+javascript
+Copy code
+const fruits = ['apple', 'banana', 'orange'];
+const lastFruit = fruits.pop();
+
+console.log(lastFruit); // Output: 'orange'
+console.log(fruits); // Output: ['apple', 'banana']
+==========================
+push example
+array.push(element1, element2, ..., elementN);
+The push() method adds one or more elements to the end of the array and modifies the original array.
+---------------------------------------------------------------------------------------
+The push() method returns the new length of the array after adding the elements. 
+const fruits = ['apple', 'banana'];
+const newLength = fruits.push('orange', 'grape');
+
+console.log(newLength); // Output: 4
+---------------------
+H.W.
+Read the document Redux toolkit
+older version redux used middleware,redux thunk for asynchronous operation Now Redux toolkit RTK Query
+->Go to the RTK Query Quick Start

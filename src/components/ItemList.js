@@ -1,9 +1,18 @@
 import { CDN_URL } from "../utils/constants";
-import { addItem } from "../utils/cartSlice";
+import { addItem, removeItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 const ItemList = ({ items }) => {
   console.log("items in Itemist", items);
 
-  const handleAddItem = () => {};
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
+
+  const handleRemoveItem = (item) => {
+    dispatch(removeItem(item));
+  };
   return (
     <div>
       {items?.map((item) => (
@@ -25,12 +34,18 @@ const ItemList = ({ items }) => {
             <p>{item?.card?.info?.description}</p>
           </div>
           <div className="w-3/12 p-4">
-            <div className="absolute">
+            <div className="absolute flex">
               <button
-                className="p-2 mx-5 rounded-lg bg-black text-white shadow-lg"
-                onClick={handleAddItem}
+                className="p-0 mx-1 rounded-sm bg-black text-white shadow-lg"
+                onClick={() => handleAddItem(item)}
               >
                 Add +
+              </button>
+              <button
+                className="p-0 mx-1 rounded-sm bg-black text-white shadow-lg"
+                onClick={() => handleRemoveItem(item)}
+              >
+                Remove-
               </button>
             </div>
             <img src={CDN_URL + item?.card?.info?.imageId} />
