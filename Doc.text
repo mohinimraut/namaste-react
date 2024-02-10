@@ -586,3 +586,156 @@ H.W.
 Read the document Redux toolkit
 older version redux used middleware,redux thunk for asynchronous operation Now Redux toolkit RTK Query
 ->Go to the RTK Query Quick Start
+=========================
+=>Testing (Developer majorly two types of testing ,unit testing and integration testing.)
+->Unit Testing=>Test your component in isolation,Ex suppose i test Header component then only test my Header component.Testing one unit or one component in isolation.
+
+->Integration Testing=>Write code to test the flow.Envolved multiple component and talking to each other.
+
+->End to End Tseting -e2e testing=>Testing user land on the website to user leave the Website.End to end the test.Required different types of tools ,like puppeter,selenum
+---------------------
+Write a test cases
+https://testing-library.com/docs/react-testing-library/intro/
+React Testing Library something known as jest
+----
+Dom testing library,React testing library.React testing library built on top of Dom testing library.Dom testing library is a base of all other testing libraries.Long time testing libraries exist.Dom testing libraries is without any framework.React testing libraries is a wrapper around Dom testing libraris.
+If you create a project using create react app then testing libraries already exist.
+
+We are create our app using parcel.Parcel is a bundler.With parcel we have to integrated testing library into our code.When laged scale applicatin not only used react libaries lot of other libraries used.
+
+Jest is a JavaScript Testing Framework with a focus on simplicity.
+React Testing Libary Jest behind the scene.
+
+Jest in turns uses a Babel.We are already using Babel along with parcel.
+-------------
+We need both React testing library and Jest
+
+npm install --save-dev @testing-library/react
+------------------
+If your project parcel then
+***Testing steps installation
+1) npm i -D @testing-library/react
+-------
+2) npm i -D jest
+We are using jest along with babel.
+3)npm install --save-dev babel-jest @babel/core @babel/preset-env
+4)Configure babel in babel.config.js
+
+Babel is a transpiler and Paarcel uses babel.
+->Parcel is already uses babel and paarcel has own cofiguration babel so parcel get confused with babel.config.js file.So we have to somechanges in Parcel 
+--
+So we go to Parcel doc
+->Seacrh jest
+-------------------
+** https://parceljs.org/languages/javascript/
+parcelrc file=>That is parcel configuration file .
+
+=====================
+*** # Setting up Testing in our app
+=========================
+-Install React Testing Library
+-Installed jest
+-Installed Babel dependencies
+-Configure Babel
+-Configure Parcel Config file to disable default babel transpilation. 
+-Jest Configuration =>npx jest --init =>It will intialized the jest=>It will create new file for jest,jest.config.js
+npx means executing jest package
+
+Asking few questions
+->Used typescript=>no
+->Used environment for testing=>jsdom
+When you running testcasee there is no server.This testcases does not run on browser not run on google chrome.There need environment to run.
+JSDOM is a library that parses and interacts with assembled HTML just like a browser.
+coverage report=> yes
+tool=>babel
+
+This options selected then automatically jest.config.js file.This file jest created for you.
+//Jest - npx jest --init
+-Installed jsdom library
+-If you are using jest environment greater than 28 then jsdom package run separately.
+
+***If run testcases
+npm run test
+
+react testing library=>setup
+
+*** ->npm i -D @babel/preset-react =>To work jsx in test cases
+->include @babel/preset-react inside my babel config
+
+->babel.config.js=>
+module.exports = {
+  presets: [["@babel/preset-env", { targets: { node: "current" } }]
+["@babel/preset-react",{runtime:"automatic"}],
+],
+ 
+};
+ ->babel preset is convert React code into html code.
+ ->toBeInTheDocument
+ ->npm install -D @testing-library/jest-dom
+ ->Contact.test.js
+ -import { render, screen } from "@testing-library/react";
+import Contact from "./components/Contact";
+import "@testing-library/jest-dom";
+test("Should load contact us component", () => {
+  render(<Contact />);
+  const heading = screen.getByRole("heading");
+  expect(heading).toBeInTheDocument("Contact Us Page");
+});
+
+-----------------
+D and --save dev same thing
+
+-npm install --save-dev jest-environment-jsdom
+-npm i -D @testing-library/jest-dom
+-------------------
+npm run test =>It give you hint already.
+testcases present in the folder __tests__
+==========================
+vscode-icons extension
+------------
+If you create __tests__ folder then .js and .ts file consider as test files.
+Headers.test.js,Headers.test.ts,Headers.spec.js,Headers.spec.ts these matches the pattern also test files
+----------
+two times underscore __ is known as dunder method
+-----------
+jest basically uses folder __tests__
+---------------------
+error***
+    BrowserslistError: `browserlist` key instead of `browserslist` in D:\akshay_senani\namaste_react\package.json
+
+    In package.json=>
+    "browserlist": [
+    "last 2 versions"
+  ]      
+  ------->>>>>>   change to 
+  "browserslist": [
+    "last 2 versions"
+  ]
+
+  --------------------
+  1.10.20
+  ===================
+  React Unit testing Component loaded or not
+  ->Let test Contact component
+  Unit testing=>Testing one compoent.Isolation of one component.
+  ------------------
+  ***To run test cases command=>npm run test
+  -------------
+  React component load or not first Component load into js dom
+  ----------
+  Q) How to enabled jsx?
+  ->.toBeInTheDocument(); this function coming from import "@testing-library/jest-dom";this library
+  ----------------------
+  HTMLInputElement=>This is basically Virtual Dom React element.
+  ----------------------
+  Q)What if I console =>const inputBoxes = screen.getAllByRole("textbox");=>It return a jsx.i.e.React Element i.e Object.,React Fiber Node,Virtual Dom Object all these things are same.
+  Find out 2 input box using query so it will be the array.
+  -------------
+  If there are multiple items used in querying All.
+  ---------------------
+  Grouped mltiple test cases into group it known as describe.
+ **** it is another name for test.
+  ----------------------------------
+***Javascript 6 falsy values false,0,'',null,undefined and Nan these are falsy values.otherwise everything is truthy values in javascript.
+toBeTruthy->hover this function give more information.
+=>jsdom understand jscode,jsxcode but it cant unederstand redux code he does not know selector
